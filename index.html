@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mtriculación RAV</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+    </head>
+<body>
+
+    <h1>Formulario de Matriculación - Real Academia de Valorant - RAV </h1>
+    <p>Rellena el siguiente formulario para entrar</p>
+
+        <label for="nombre">Nombre y Apellidos:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+            <br>
+
+            <label for="riotid">Riot ID con almohadilla (ej. Jett#EUW):</label><br>
+            <input type="text" id="riotid" name="riotid" required><br>
+            <br>
+
+            <label for="correo">Correo Electrónico:</label><br>
+            <input type="email" id="correo" name="correo" required><br>
+            <br>
+
+            <label for="edad">Edad:</label><br>
+            <input type="number" id="edad" name="edad" min="12" max="99"><br>
+            <br>
+
+            <label for="pais">Código de referencia ( no modificable):</label><br>
+            <input type="text" id="pais" name="pais" value="VAL-ES-2026" disabled><br>
+            <br>
+
+    <form action="nophp.php" method="post">
+
+        <!-- Círculos para marcar (Radio) -->
+        <fieldset>
+            <legend>Rango Actual en Competitivo</legend>
+
+            <input type="radio" id="hierro-bronce" name="rango" value="hierro-bronce">
+            <label for="hierro-bronce">Hierro / Bronce</label><br>
+
+            <input type="radio" id="plata-oro" name="rango" value="plata-oro">
+            <label for="plata-oro">Plata / Oro</label><br>
+
+            <input type="radio" id="platino-diamante" name="rango" value="platino-diamante">
+            <label for="platino-diamante">Platino / Diamante</label><br>
+
+            <input type="radio" id="inmortal" name="rango" value="inmortal">
+            <label for="inmortal">Ascendente / Inmortal / Radiante</label><br>
+
+            <!-- Círculo que NO se puede marcar -->
+            <input type="radio" id="vct" name="rango" value="vct" disabled>
+            <label for="vct">Jugador VCT Pro (Plazas agotadas)</label><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Desplegables -->
+        <fieldset>
+            <legend>Rol y Servidor</legend>
+
+            <label for="rol">Elige tu rol principal:</label><br>
+            <select id="rol" name="rol">
+                <option value="">-- Selecciona un rol --</option>
+                <option value="duelista">Duelista</option>
+                <option value="iniciador">Iniciador</option>
+                <option value="controlador">Controlador</option>
+                <option value="centinela">Centinela</option>
+            </select><br><br>
+
+            <label for="servidor">Servidor habitual de juego:</label><br>
+            <select id="servidor" name="servidor">
+                <option value="madrid">Madrid</option>
+                <option value="frankfurt">Frankfurt</option>
+                <option value="paris">París</option>
+                <option value="londres">Londres</option>
+                <option value="santiago">Santiago</option>
+                <option value="bogota">Bogotá</option>
+            </select><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Cuadros de verificación (Checkboxes) -->
+        <fieldset>
+            <legend>Aspectos que quieres entrenar</legend>
+
+            <input type="checkbox" id="aim" name="aspectos" value="aim">
+            <label for="aim">Puntería (Aim y Crosshair Placement)</label><br>
+
+            <input type="checkbox" id="gamesense" name="aspectos" value="gamesense">
+            <label for="gamesense">Sentido de juego (Game Sense)</label><br>
+
+            <input type="checkbox" id="lineups" name="aspectos" value="lineups">
+            <label for="lineups">Utilidad y Lineups</label><br>
+
+            <input type="checkbox" id="comms" name="aspectos" value="comms">
+            <label for="comms">Comunicación en equipo</label><br>
+
+            <!-- Checkbox que NO se puede marcar -->
+            <input type="checkbox" id="bootcamp" name="aspectos" value="bootcamp" disabled>
+            <label for="bootcamp">Viaje presencial a Seúl (No disponible)</label><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Cuadro de texto largo -->
+        <fieldset>
+            <legend>Observaciones</legend>
+            <label for="notas">Comentarios adicionales o disponibilidad de horario:</label><br>
+            <textarea id="notas" name="notas" rows="4" cols="45"></textarea>
+        </fieldset>
+
+        <br>
+
+        <!-- DNI -->
+        <fieldset>
+            <legend>DNI </legend>
+            Sube aquí tu foto del DNI (Parte delantera)
+          <input type="file" name="DNI"> 
+        </fieldset>
+
+
+        <!-- Checkbox obligatorio -->
+        <input type="checkbox" id="terminos" name="terminos" required>
+        <label for="terminos">Acepto los <a href="Terminos.html"> Términos y Condiciones </a></label><br><br>
+
+        <!-- Botones -->
+        <input type="submit" value="Enviar Formulario">
+        <input type="reset" value="Restablecer Campos">
+
+        <br>
+
+
+    </form>
+
+</body>
+</html>
